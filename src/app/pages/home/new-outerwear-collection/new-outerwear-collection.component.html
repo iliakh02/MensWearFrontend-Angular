@@ -1,0 +1,17 @@
+<div class="content-container">
+    <div class="new-col-carousel">
+        <ngb-carousel>
+            <ng-template ngbSlide *ngFor="let image of images">
+                <div class="wrapper">
+                    <img [src]="image" alt="slide">
+                </div>
+            </ng-template>
+        </ngb-carousel>
+        <div class="slides-content">
+            <p class="slides-title">New Outerwear Collection</p>
+            <br>
+            <br>
+            <a href="#" class="shop-now-btn">Shop now</a>
+        </div>
+    </div>
+</div>

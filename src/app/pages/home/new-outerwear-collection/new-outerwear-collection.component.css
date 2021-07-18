@@ -1,0 +1,75 @@
+.new-col-carousel {
+  position: relative;
+}
+
+ngb-carousel {
+  margin: 30px 0 0;
+}
+ngb-carousel img {
+  width: 100%;
+  margin-left: auto;
+  margin-right: auto;
+}
+ngb-carousel {
+  width: inherit;
+  height: inherit;
+}
+.carousel-inner {
+  overflow: visible;
+}
+.carousel-item.active {
+  opacity: 1;
+  visibility: visible;
+  z-index: 10;
+}
+.carousel-control-prev {
+  z-index: 20;
+}
+.carousel-control-next {
+  z-index: 20;
+}
+.carousel-indicators {
+  z-index: 20;
+}
+
+.slides-content {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate3d(-50%, -50%, 0);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.slides-title {
+  color: #fff;
+  line-height: 1em;
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+.shop-now-btn {
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  width: 10rem;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  text-decoration: none;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  background-color: transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.shop-now-btn:hover,
+.shop-now-btn:active,
+.shop-now-btn:focus {
+  background-color: #a67a4b !important;
+  border-color: transparent;
+}
