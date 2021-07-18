@@ -10,3 +10,7 @@
 #content {
   background-color: var(--bg-color);
 }
+#main {
+    padding-top: 101.5px;
+    z-index: 1;
+}

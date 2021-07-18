@@ -1,7 +1,15 @@
 .navbar-top {
   display: flex;
   justify-content: space-between;
+  background-color: var(--bg-color);
   color: rgba(0, 0, 0, 0.5);
+  padding: 20px 0;
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
 }
 .logo {
   display: flex;
