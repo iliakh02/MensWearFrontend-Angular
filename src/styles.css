@@ -2,9 +2,11 @@
 /* You can add global styles to this file, and also import other style files */
 * {
   --bg-color: #f8f9fa;
+  --link-hover: #c08d40;
+  --main-container-spaces: 80px;
 }
 .content-container {
-  width: calc(100% - 80px);
+  width: calc(100% - var(--main-container-spaces));
   margin: 0 auto;
 }
 #content {
@@ -13,4 +15,13 @@
 #main {
     padding-top: 101.5px;
     z-index: 1;
+}
+.img-title {
+  color: #fff;
+  line-height: 1em;
+  text-align: center;
+  font-size: 80px;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+  font-weight: bold;
 }

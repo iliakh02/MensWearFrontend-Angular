@@ -1,0 +1,25 @@
+#our-information {
+  display: flex;
+  justify-content: space-between;
+  padding-top: 70px;
+}
+.our-story,
+.our-blog {
+  position: relative;
+  width: calc((100% - 60px) / 2);
+}
+.our-story img,
+.our-blog img {
+  width: 100%;
+}
+.our-info-link {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  text-decoration: none;
+}
+.our-info-link:focus,
+.our-info-link:hover {
+  color: var(--link-hover);
+}

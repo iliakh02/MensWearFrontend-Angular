@@ -9,9 +9,9 @@ import { NgbCarouselConfig } from '@ng-bootstrap/ng-bootstrap';
 })
 export class NewOuterwearCollectionComponent {
   images = [
-    "/assets/images/new-outerwear-collection-slides/slide-1.jpg",
-    "/assets/images/new-outerwear-collection-slides/slide-2.jpg",
-    "/assets/images/new-outerwear-collection-slides/slide-3.jpg"
+    "/assets/images/home/new-outerwear-collection-slides/slide-1.jpg",
+    "/assets/images/home/new-outerwear-collection-slides/slide-2.jpg",
+    "/assets/images/home/new-outerwear-collection-slides/slide-3.jpg"
   ];
   constructor(config: NgbCarouselConfig) {
     config.interval = 3000;

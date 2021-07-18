@@ -3,7 +3,7 @@
   justify-content: space-between;
   background-color: var(--bg-color);
   color: rgba(0, 0, 0, 0.5);
-  padding: 20px 0;
+  padding: 20px calc(var(--main-container-spaces)/2);
   overflow: hidden;
   position: fixed;
   top: 0;
@@ -30,7 +30,7 @@ img.logo-img {
 .navbar-light .navbar-nav .nav-link:hover,
 #sign-in-btn:focus,
 #sign-in-btn:hover {
-  color: #c08d40;
+  color: var(--link-hover);
 }
 
 #sign-in-btn {

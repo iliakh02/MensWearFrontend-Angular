@@ -6,12 +6,14 @@ import { AppComponent } from './app.component';
 import { TopBarComponent } from './top-bar/top-bar.component';
 import { NewOuterwearCollectionComponent } from './pages/home/new-outerwear-collection/new-outerwear-collection.component';
 import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
+import { OurInformationComponent } from './pages/home/our-information/our-information.component';
 
 @NgModule({
   declarations: [
     AppComponent,
     TopBarComponent,
-    NewOuterwearCollectionComponent
+    NewOuterwearCollectionComponent,
+    OurInformationComponent
   ],
   imports: [
     BrowserModule,
