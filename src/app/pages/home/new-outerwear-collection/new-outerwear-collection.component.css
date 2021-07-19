@@ -37,27 +37,3 @@ ngb-carousel {
   flex-direction: column;
   align-items: center;
 }
-.shop-now-btn {
-  color: #fff;
-  border: 3px solid #fff;
-  border-radius: 30px;
-  width: 10rem;
-  height: 3rem;
-  padding: 0.5rem 1rem;
-  display: flex;
-  flex-direction: column-reverse;
-  text-decoration: none;
-  font-size: 1.25rem;
-  line-height: 1.5;
-  font-weight: 400;
-  text-align: center;
-  background-color: transparent;
-  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
-    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
-}
-.shop-now-btn:hover,
-.shop-now-btn:active,
-.shop-now-btn:focus {
-  background-color: var(--link-hover);
-  border-color: transparent;
-}

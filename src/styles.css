@@ -25,3 +25,35 @@
   font-weight: 500;
   font-weight: bold;
 }
+
+
+.shop-btn {
+  color: #fff;
+  border: 3px solid #fff;
+  border-radius: 30px;
+  width: 10rem;
+  height: 3rem;
+  padding: 0.5rem 1rem;
+  display: flex;
+  flex-direction: column-reverse;
+  text-decoration: none;
+  font-size: 1.25rem;
+  line-height: 1.5;
+  font-weight: 400;
+  text-align: center;
+  background-color: transparent;
+  transition: color 0.15s ease-in-out, background-color 0.15s ease-in-out,
+    border-color 0.15s ease-in-out, box-shadow 0.15s ease-in-out;
+}
+.shop-btn:hover,
+.shop-btn:active,
+.shop-btn:focus {
+  background-color: var(--link-hover);
+  border-color: transparent;
+  text-decoration: none;
+  color: #fff;
+}
+
+.our-advantages {
+  margin: 100px 40px;
+}

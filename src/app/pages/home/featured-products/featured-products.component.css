@@ -1,0 +1,27 @@
+#featured-products-container {
+  background-color: #f0f0f0;
+  margin-top: 70px;
+  padding: 70px calc(var(--main-container-spaces) / 2) 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+#featured-products-title {
+  text-transform: uppercase;
+  letter-spacing: 0.15em;
+}
+#featured-product-carousel {
+    padding: 70px 0;
+}
+.shop-all-btn {
+    color: var(--link-hover);
+    border-color: var(--link-hover);
+}
+.shop-all-btn:hover,
+.shop-all-btn:focus,
+.shop-all-btn:active {
+    color: #fff;
+}
+#categories {
+    padding: 70px 0 10px;
+}
