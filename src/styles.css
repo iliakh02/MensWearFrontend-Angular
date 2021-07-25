@@ -1,4 +1,4 @@
-@import "~bootstrap/dist/css/bootstrap.css";
+/* @import "~bootstrap/dist/css/bootstrap.css"; */
 /* You can add global styles to this file, and also import other style files */
 * {
   --bg-color: #f8f9fa;
@@ -54,6 +54,4 @@
   color: #fff;
 }
 
-.our-advantages {
-  margin: 100px 40px;
-}
+

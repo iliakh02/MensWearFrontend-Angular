@@ -1,0 +1,24 @@
+#our-advantages {
+  background-color: #f0f0f0;
+  margin: 10px 0 0;
+  padding: 100px 40px;
+  display: flex;
+  
+}
+.advantage {
+    width: 33.33%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+.advantage svg {
+    width: 34px;
+    height: 34px;
+}
+.advantage svg [data-color="1"] {
+  fill: #31271b;
+}
+.advantage h5 {
+    letter-spacing: 0.1em;
+    font-weight: 400;
+}

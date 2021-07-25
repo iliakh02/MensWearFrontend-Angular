@@ -1,10 +1,23 @@
 <div id="featured-products-container">
     <h5 id="featured-products-title">Featured products</h5>
     <div id="featured-product-carousel">
-        There have to be carousel
+        <a id="carousel-control-prev-btn" (click)="owlCar.prev()">
+            <img src="/src/assets/images/left-arrow.png" alt="b">
+        </a>
+        <owl-carousel-o [options]="customOwlOptions" #owlCar>
+            <ng-container *ngFor="let product of products">
+                <ng-template carouselSlide [id]="product.id+''">
+                    <div class="product-item">
+                        <img [src]="'https://localhost:44352/images/'+product.image" [alt]="product.name">
+                        <h3 class="product-name">{{ product.name }}</h3>
+                        <p class="product-price">{{product.price | currency}}</p>
+                    </div>
+                </ng-template>
+            </ng-container>
+        </owl-carousel-o>
+        <a id="carousel-control-next-btn" (click)="owlCar.next()">
+            <img src="/src/assets/images/right-arrow.svg" alt="Next slide">
+        </a>
     </div>
-<a href="#" class="shop-btn shop-all-btn">Shop All</a>
-    <div id="categories">
-        There have to be categories
-    </div>
+    <a href="#" class="shop-btn shop-all-btn">Shop All</a>
 </div>
