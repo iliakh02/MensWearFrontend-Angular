@@ -2,21 +2,28 @@
     <h5 id="featured-products-title">Featured products</h5>
     <div id="featured-product-carousel">
         <a id="carousel-control-prev-btn" (click)="owlCar.prev()">
-            <img src="/src/assets/images/left-arrow.png" alt="b">
+            <img src="/assets/images/left-arrow.png" alt="b">
         </a>
         <owl-carousel-o [options]="customOwlOptions" #owlCar>
             <ng-container *ngFor="let product of products">
                 <ng-template carouselSlide [id]="product.id+''">
-                    <div class="product-item">
-                        <img [src]="'https://localhost:44352/images/'+product.image" [alt]="product.name">
-                        <h3 class="product-name">{{ product.name }}</h3>
-                        <p class="product-price">{{product.price | currency}}</p>
-                    </div>
+                    <a class="product-item" href="#">
+                        <div class="product-image">
+                            <img [src]="'https://localhost:44352/images/' + product.image" [alt]="product.name">
+                            <div class="quick-view-message">
+                                <p>Quick view</p>
+                            </div>
+                        </div>
+                        <div class="product-content">
+                            <h3 class="product-name">{{ product.name }}</h3>
+                            <p class="product-price">{{product.price | currency}}</p>
+                        </div>
+                    </a>
                 </ng-template>
             </ng-container>
         </owl-carousel-o>
         <a id="carousel-control-next-btn" (click)="owlCar.next()">
-            <img src="/src/assets/images/right-arrow.svg" alt="Next slide">
+            <img src="/assets/images/right-arrow.png" alt="Next slide">
         </a>
     </div>
     <a href="#" class="shop-btn shop-all-btn">Shop All</a>
