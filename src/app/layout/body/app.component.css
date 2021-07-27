@@ -1,0 +1,15 @@
+#social-media-panel {
+  position: absolute;
+  top: 50%;
+  left: 100%;
+  transform: translate(-200%, -50%);
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+#social-media-panel a {
+  display: block;
+  color: black;
+  font-size: 1.6rem;
+  padding: 0.6rem 0;
+}

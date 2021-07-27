@@ -3,7 +3,7 @@
 * {
   --bg-color: #f8f9fa;
   --link-hover: #c08d40;
-  --main-container-spaces: 80px;
+  --main-container-spaces: 10rem;
 }
 .content-container {
   width: calc(100% - var(--main-container-spaces));
