@@ -14,6 +14,8 @@ import { HomeComponent } from './pages/home/home.component';
 import { HttpClientModule } from '@angular/common/http';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
+import { FooterComponent } from './layout/footer/footer.component';
+import { BottomBarComponent } from './layout/bottom-bar/bottom-bar.component';
 
 @NgModule({
   declarations: [
@@ -23,7 +25,9 @@ import { CarouselModule } from 'ngx-owl-carousel-o';
     OurInformationComponent,
     FeaturedProductsComponent,
     OurAdvantagesComponent,
-    HomeComponent
+    HomeComponent,
+    FooterComponent,
+    BottomBarComponent
   ],
   imports: [
     BrowserModule,
