@@ -16,6 +16,7 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { CarouselModule } from 'ngx-owl-carousel-o';
 import { FooterComponent } from './layout/footer/footer.component';
 import { BottomBarComponent } from './layout/bottom-bar/bottom-bar.component';
+import { AboutComponent } from './pages/about/about/about.component';
 
 @NgModule({
   declarations: [
@@ -27,7 +28,8 @@ import { BottomBarComponent } from './layout/bottom-bar/bottom-bar.component';
     OurAdvantagesComponent,
     HomeComponent,
     FooterComponent,
-    BottomBarComponent
+    BottomBarComponent,
+    AboutComponent
   ],
   imports: [
     BrowserModule,
@@ -37,7 +39,8 @@ import { BottomBarComponent } from './layout/bottom-bar/bottom-bar.component';
     CarouselModule,
     RouterModule.forRoot([
       { path: '', component: HomeComponent },
-      { path: 'home', redirectTo: ''}
+      { path: 'home', redirectTo: '' },
+      { path: 'about', component: AboutComponent }
       
     ]),
     NgbModule

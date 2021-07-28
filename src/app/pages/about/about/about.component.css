@@ -1,0 +1,22 @@
+#about-container {
+  display: flex;
+}
+.about-content-container{
+  width: 50%;
+  background-color: #222a31;
+  color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about-content {
+  max-width: 30rem;
+}
+
+.about-img {
+  width: 50%;
+}
+
+.about-img img {
+  width: 100%;
+}
