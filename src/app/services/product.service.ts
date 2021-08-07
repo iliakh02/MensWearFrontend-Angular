@@ -13,15 +13,23 @@ import { environment } from 'src/environments/environment';
   providedIn: 'root'
 })
 export class ProductService {
-  
+
   constructor(private http: HttpClient) { }
 
-  getProducts() : Observable<Product[]> {
+  getProductsForHomePage(): Observable<Product[]> {
     return this.http.get<Product[]>(environment.apiUrl)
       .pipe(
-      catchError(this.handleError)
-    );
+        catchError(this.handleError)
+      );
   }
+
+  getAllProducts() {
+    return this.http.get(`${environment.apiUrl}products`)
+      .pipe(
+        catchError(this.handleError)
+      );
+  }
+
 
 
 
@@ -31,7 +39,7 @@ export class ProductService {
     } else {
       console.error(`Backend returned code ${error.status}, ` + `body was: ${error.error}`);
     }
-    
+
     return throwError('Something bad happened. Please try again later.');
   }
 }

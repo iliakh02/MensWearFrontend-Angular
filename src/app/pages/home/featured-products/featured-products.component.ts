@@ -2,13 +2,6 @@ import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 
-
-import { Observable, throwError } from 'rxjs';
-import { catchError, retry } from 'rxjs/operators'
-import { HttpErrorResponse } from '@angular/common/http';
-import { OwlOptions } from 'ngx-owl-carousel-o';
-
-
 @Component({
   selector: 'app-featured-products',
   templateUrl: './featured-products.component.html',
@@ -43,7 +36,7 @@ export class FeaturedProductsComponent implements OnInit {
   constructor(private productService: ProductService) { }
 
   ngOnInit(): void {
-    this.productService.getProducts()
+    this.productService.getProductsForHomePage()
       .subscribe(result => this.products = result,
         errors => console.log(errors)
     );
