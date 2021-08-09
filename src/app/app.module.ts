@@ -8,7 +8,6 @@ import { AppComponent } from './layout/body/app.component';
 import { TopBarComponent } from './layout/top-bar/top-bar.component';
 import { BottomBarComponent } from './layout/bottom-bar/bottom-bar.component';
 import { FooterComponent } from './layout/footer/footer.component';
-import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
 
 @NgModule({
   declarations: [
@@ -21,8 +20,7 @@ import { NgbModule } from '@ng-bootstrap/ng-bootstrap';
     BrowserModule,
     AppRoutingModule,
     HttpClientModule,
-    BrowserAnimationsModule,
-    NgbModule
+    BrowserAnimationsModule
   ],
   providers: [],
   bootstrap: [AppComponent]
