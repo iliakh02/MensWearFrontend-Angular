@@ -9,7 +9,7 @@
                 <ng-template carouselSlide [id]="product.id+''">
                     <a class="product-item" href="#">
                         <div class="product-image">
-                            <img [src]="'https://localhost:44352/images/' + product.image" [alt]="product.name">
+                            <img [src]="apiUrl+'/images/' + product.image" [alt]="product.name">
                             <div class="quick-view-message">
                                 <p>Quick view</p>
                             </div>

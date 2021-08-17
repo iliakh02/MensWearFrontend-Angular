@@ -8,6 +8,7 @@ import { map } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Product } from '../models/product';
 import { environment } from 'src/environments/environment';
+import { productsPerPageModel } from '../models/productsPerPageModel';
 
 @Injectable({
   providedIn: 'root'
@@ -23,8 +24,8 @@ export class ProductService {
       );
   }
 
-  getAllProducts() {
-    return this.http.get(`${environment.apiUrl}products`)
+  getProductsPerPage(): Observable<productsPerPageModel> {
+    return this.http.get<productsPerPageModel>(`${environment.apiUrl}products`)
       .pipe(
         catchError(this.handleError)
       );

@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
+import { environment } from 'src/environments/environment';
 
 @Component({
   selector: 'app-featured-products',
@@ -9,6 +10,7 @@ import { ProductService } from 'src/app/services/product.service';
 })
 export class FeaturedProductsComponent implements OnInit {
   products: Product[] = [];
+  apiUrl: string = environment.apiUrl;
   customOwlOptions: any = {
     loop: true,
     mouseDrag: false,
