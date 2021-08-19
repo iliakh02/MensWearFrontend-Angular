@@ -1,10 +1,6 @@
 import { Injectable } from '@angular/core';
-
 import { Observable, throwError } from 'rxjs';
 import { catchError, retry } from 'rxjs/operators'
-
-import { pipe } from 'rxjs';
-import { map } from 'rxjs/operators';
 import { HttpClient, HttpErrorResponse, HttpResponse } from '@angular/common/http';
 import { Product } from '../models/product';
 import { environment } from 'src/environments/environment';
@@ -24,8 +20,8 @@ export class ProductService {
       );
   }
 
-  getProductsPerPage(): Observable<productsPerPageModel> {
-    return this.http.get<productsPerPageModel>(`${environment.apiUrl}products`)
+  getProductsPerPage(pageSize: number, page: number): Observable<productsPerPageModel> {
+    return this.http.get<productsPerPageModel>(`${environment.apiUrl}products?pageSize=${pageSize}&page=${page}`)
       .pipe(
         catchError(this.handleError)
       );

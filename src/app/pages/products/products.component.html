@@ -1,6 +1,7 @@
 <div class="content-container">
     <div id="products">
-        <a class="product-item" href="#" *ngFor="let product of products">
+        <a class="product-item" href="#"
+            *ngFor="let product of products | paginate: {itemsPerPage: itemsPerPage, currentPage: currPage, totalItems: totalItems}">
             <div class="product-image">
                 <img [src]="apiUrl+'/images/' + product.image" [alt]="product.name">
                 <div class="quick-view-message">
@@ -9,8 +10,13 @@
             </div>
             <div class="product-content">
                 <h3 class="product-name">{{ product.name }}</h3>
-                <p class="product-price">{{product.price | currency}}</p>
+                <p class="product-price">{{ product.price | currency }}</p>
             </div>
         </a>
     </div>
+
+    <pagination-controls class="my-pagination" (pageChange)="getProductsPerPageEvent(currPage = $event)"
+                      previousLabel=""
+                      nextLabel="">
+    </pagination-controls>
 </div>

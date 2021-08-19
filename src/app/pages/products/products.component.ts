@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { ActivatedRoute } from '@angular/router';
 import { Product } from 'src/app/models/product';
 import { ProductService } from 'src/app/services/product.service';
 import { environment } from 'src/environments/environment';
@@ -10,20 +11,28 @@ import { environment } from 'src/environments/environment';
 })
 export class ProductsComponent implements OnInit {
 
-  constructor(private productService: ProductService) { }
+  constructor(private productService: ProductService) {
+  }
   apiUrl: string = environment.apiUrl;
   products: any | undefined;
-  pageSize: number | undefined;
-  currentSize: number | undefined
-  ngOnInit(): void {
+  itemsPerPage: number = 4;
+  currPage: number | undefined;
+  totalItems: number | undefined;
 
-    this.productService.getProductsPerPage()
+  ngOnInit(): void {
+    this.getProductsPerPageEvent();
+  }
+
+  getProductsPerPageEvent(page: number = 1) {
+    this.productService.getProductsPerPage(this.itemsPerPage, page)
       .subscribe(result => {
+        console.log(result),
           this.products = result.products,
-          this.pageSize = result.pageSize,
-          this.currentSize = result.currentPage
-        },
+          this.itemsPerPage = result.pageSize,
+          this.currPage = result.currentPage,
+          this.totalItems = result.totalItems
+      },
         errors => console.log(errors)
-    );
+      );
   }
 }
